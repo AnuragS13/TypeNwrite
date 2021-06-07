@@ -14,22 +14,22 @@ def textExtract(im):
             pixel = im.getpixel((i,j))
             if(type(pixel)!=type(1) and len(pixel)>=3):
                 if(not(pixel[0]>60 and pixel[1]>60 and pixel[2]>60)):
-                    out.putpixel((i,j),(pixel[0],pixel[1],pixel[2],235))
+                    out.putpixel((i,j),(pixel[0],pixel[1],pixel[2],255))
                     yt=min(yt,j)
                     yb=max(yb,j)
                     xl=min(xl,i)
                     xr=max(xr,i)
                 else:
-                    out.putpixel((i,j),(0,0,0,0))
+                    out.putpixel((i,j),(255,255,255,255))
             else:
                 if(pixel<80):
-                    out.putpixel((i,j),(pixel,pixel,pixel,235))
+                    out.putpixel((i,j),(pixel,pixel,pixel,255))
                     yt=min(yt,j)
                     yb=max(yb,j)
                     xl=min(xl,i)
                     xr=max(xr,i)
                 else:
-                    out.putpixel((i,j),(0,0,0,0))
+                    out.putpixel((i,j),(255,255,255,255))
     out=out.crop((xl,yt,xr,yb))
     xdim,ydim = out.size
     try:
