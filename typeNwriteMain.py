@@ -5,6 +5,7 @@ from sys import argv
 
 spacing = 30
 
+xoffset = 10
 def pasteLetter( opArray,blnk, letter, letterType):
     global spacing,xoffset
     top=0;
@@ -37,41 +38,42 @@ def pasteLetter( opArray,blnk, letter, letterType):
 
 
 
-blnk = Image.open("Blank.jpg")
+def createfile(text,pf):
+    global spacing,xoffset
+    blnk = Image.open("Blank.jpg")
 
-blnk=blnk.resize((2000,2828))
-# lines = []
-# for i in range(2828):
-    # if(i%spacing==0):
-        # lines.append(i)
-dic={}
+    blnk=blnk.resize((2000,2828))
+    # lines = []
+    # for i in range(2828):
+        # if(i%spacing==0):
+            # lines.append(i)
+    dic={}
 
-loc = "profiles/"+argv[2]
+    loc = "profiles/"+pf
 
-if(not(loc.endswith('/'))):
-    loc+='/'
+    if(not(loc.endswith('/'))):
+        loc+='/'
 
-ls= os.listdir(loc)
-for item in ls:
-    img = Image.open(loc+item)
-    item.replace(".jpg","")
-    item.replace(".png","")
-    dic[item[0]]=(img,item[1])
-    
-s = argv[1]
+    ls= os.listdir(loc)
+    for item in ls:
+        img = Image.open(loc+item)
+        item.replace(".jpg","")
+        item.replace(".png","")
+        dic[item[0]]=(img,item[1])
+        
+    s = text
 
-opArray = [0,1,2,3]
+    opArray = [0,1,2,3]
 
-xoffset = 10
 
-for ch in s:
-    if(ch==' '):
-        xoffset+=50
-    elif(ch=='\n'):
-        xoffset=10
-        opArray= [item + 3 for item in opArray]
-    else:
-        pasteLetter(opArray,blnk,dic[ch][0],int(dic[ch][1]))
+    for ch in s:
+        if(ch==' '):
+            xoffset+=50
+        elif(ch=='\n'):
+            xoffset=10
+            opArray= [item + 3 for item in opArray]
+        else:
+            pasteLetter(opArray,blnk,dic[ch][0],int(dic[ch][1]))
 
-blnk.save("test_sample.jpg")
-blnk.show();
+    blnk.save("test_sample.jpg")
+    blnk.show();

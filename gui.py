@@ -1,12 +1,16 @@
 import tkinter as tk
 import tkinter.scrolledtext as tks
 import subprocess
+import typeNwriteMain as tNw
+
+spacing = tNw.spacing
 
 def get_copy():
     global e1,e2
     txt = e1.get('1.0', tk.END)
     pf = e2.get()
-    subprocess.call(['python3','typeNwriteMain.py',txt,pf])
+    tNw.createfile(txt,pf)
+    # subprocess.call(['python3','typeNwriteMain.py',txt,pf])
 
 
 root = tk.Tk()
