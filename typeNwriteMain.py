@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 from sys import argv
 
-spacing = 50
+spacing = 30
 
 def pasteLetter( opArray,blnk, letter, letterType):
     global spacing,xoffset
@@ -69,7 +69,7 @@ for ch in s:
         xoffset+=50
     elif(ch=='\n'):
         xoffset=10
-        opArray= [item + 4 for item in opArray]
+        opArray= [item + 3 for item in opArray]
     else:
         pasteLetter(opArray,blnk,dic[ch][0],int(dic[ch][1]))
 
