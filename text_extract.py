@@ -51,6 +51,7 @@ for item in lst:
         try:
             im=im.resize((int((xdim/ydim)*150),150))
             item = item.replace(".jpg","")
+            item = item.replace(".png","")
             dic[item]=textExtract(im)
         except:
             pass
