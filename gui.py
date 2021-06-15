@@ -1,6 +1,5 @@
 import tkinter as tk
 import tkinter.scrolledtext as tks
-import subprocess
 import typeNwriteMain as tNw
 
 spacing = tNw.spacing
