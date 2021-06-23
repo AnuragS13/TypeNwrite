@@ -17,13 +17,19 @@ Make sure python3 shows up in command prompt.
 To create a new profile go through the following steps:
 
 1.Create an empty folder(its name is up to you but in this guide I'll call it "source folder").
+
 2.Take snapshots of each alphabet separately. Make sure the text has been written on a clean white page(with no lines in it) and with a black colored pen.
+
 3.Name each image according to the following format-
+
 XTG.jpg or XTG.png
   
-Here
+Here,
+
 X = the alphabet the image has in it.
+
 T = a number between 1 to 4 which denotes type of alphabet (it is explained in the images below)
+
 G = any string of letter(completely optional, added just in case the computer has problem in naming the image)
   
 G can be an empty string, so XT.jpg and XT.png are also valid formats
@@ -33,8 +39,11 @@ G can be an empty string, so XT.jpg and XT.png are also valid formats
 Consider the above as children's alphabet writing notebook
 If your letter -
 Has line 1 as top and line 3 as bottom then it is of type 1.
+
 Has line 2 as top and line 3 as bottom then it is of type 2.
+
 Has line 2 as top and line 4 as bottom then it is of type 3.
+
 Has line 1 as top and line 4 as bottom then it is of type 4.
   
   
