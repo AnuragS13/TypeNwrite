@@ -28,6 +28,16 @@ To create a new profile go through the following steps:
   
   G can be an empty string, so XT.jpg and XT.png are also valid formats
   
+  ![lines](https://github.com/AnuragS13/TypeNwrite/blob/main/Letter_types.jpg)
+  
+  Consider the above as children's alphabet writing notebook
+  If your letter -
+  Has line 1 as top and line 3 as bottom then it is of type 1.
+  Has line 2 as top and line 3 as bottom then it is of type 2.
+  Has line 2 as top and line 4 as bottom then it is of type 3.
+  Has line 1 as top and line 4 as bottom then it is of type 4.
+  
+  
 ## Adding handwriting profile:
 1. Run gui.py file.
 2. Open menu.
