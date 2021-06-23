@@ -1,7 +1,5 @@
 import os
 from PIL import Image
-import numpy as np
-from sys import argv
 
 spacing = 30
 
@@ -43,6 +41,10 @@ def createfile(text,pf):
     blnk = Image.open("Blank.jpg")
 
     blnk=blnk.resize((2000,2828))
+    for i in range(2000):
+        for j in range(2828):
+            if(j%30==0):
+                blnk.putpixel((i,j),(0,0,0,0))
     # lines = []
     # for i in range(2828):
         # if(i%spacing==0):
