@@ -38,35 +38,39 @@ def textExtract(im):
         print(xdim,ydim)
     return out
 
-src_folder = argv[1];
-tar_folder = argv[2];
-if(not(src_folder.endswith("/"))):
-    src_folder+='/'
-dic={}
-lst = os.listdir(src_folder)
-for item in lst:
-    if(item!="Blank.jpg"):
-        im = Image.open(src_folder+item,"r")
-        xdim,ydim = im.size
-        try:
-            im=im.resize((int((xdim/ydim)*150),150))
-            item = item.replace(".jpg","")
-            item = item.replace(".png","")
-            dic[item]=textExtract(im)
-        except:
-            pass
+def make_pf(source,target):
+    src_folder = source;
+    tar_folder = target;
 
-try:
-    os.chdir("profiles")
-except:
-    os.mkdir("profiles")
-    os.chdir("profiles")
-    
-try:
-    os.chdir(tar_folder)
-except:
-    os.mkdir(tar_folder)
-    os.chdir(tar_folder)
+    if(not(src_folder.endswith("/"))):
+        src_folder+='/'
+    dic={}
+    lst = os.listdir(src_folder)
+    for item in lst:
+        if(item!="Blank.jpg"):
+            im = Image.open(src_folder+item,"r")
+            xdim,ydim = im.size
+            try:
+                im=im.resize((int((xdim/ydim)*150),150))
+                item = item.replace(".jpg","")
+                item = item.replace(".png","")
+                dic[item]=textExtract(im)
+            except:
+                pass
 
-for key in dic:
-    dic[key].save(key+".png");
+    try:
+        os.chdir("profiles")
+    except:
+        os.mkdir("profiles")
+        os.chdir("profiles")
+        
+    try:
+        os.chdir(tar_folder)
+    except:
+        os.mkdir(tar_folder)
+        os.chdir(tar_folder)
+
+    for key in dic:
+        dic[key].save(key+".png");
+
+make_pf("/root/Documents/testing/","sample2")
