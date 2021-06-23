@@ -28,7 +28,7 @@ To create a new profile go through the following steps:
   
   G can be an empty string, so XT.jpg and XT.png are also valid formats
   
-  ![lines](https://github.com/AnuragS13/TypeNwrite/blob/main/Letter_types.jpg)
+  ![lines](https://github.com/AnuragS13/TypeNwrite/blob/main/Letter_Types.jpg)
   
   Consider the above as children's alphabet writing notebook
   If your letter -
