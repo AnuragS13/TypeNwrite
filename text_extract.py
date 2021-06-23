@@ -39,6 +39,7 @@ def textExtract(im):
     return out
 
 def make_pf(source,target):
+    curfolder=os.curdir()
     src_folder = source;
     tar_folder = target;
 
@@ -72,5 +73,5 @@ def make_pf(source,target):
 
     for key in dic:
         dic[key].save(key+".png");
+    os.chdir(curfolder)
 
-make_pf("/root/Documents/testing/","sample2")
