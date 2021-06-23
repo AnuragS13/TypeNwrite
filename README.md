@@ -67,5 +67,7 @@ Note : The output will be in the same folder with the name "test_sample.jpg".
 # Developer's Note:
 
 TypeNwrite is not complete yet. I'll keep adding new things when I get time and new ideas.
+
 Feel free to suggest improvements.
+
 Peace!
